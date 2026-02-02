@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 255 255 255;
+    --color-foreground: 10 10 10;
+    --color-muted: 115 115 115;
+    --color-border: 229 229 229;
+    --color-primary: 99 102 241;
+    --color-primary-foreground: 255 255 255;
+  }
+
+  .dark {
+    --color-background: 10 10 10;
+    --color-foreground: 245 245 245;
+    --color-muted: 163 163 163;
+    --color-border: 38 38 38;
+    --color-primary: 129 140 248;
+    --color-primary-foreground: 10 10 10;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[rgb(var(--color-background))] text-[rgb(var(--color-foreground))];
+    @apply antialiased;
+  }
+}
